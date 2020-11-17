@@ -19,6 +19,27 @@
                   android:key="development_prefs_screen"
                   android:title="@string/development_settings_title">
 
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:key="advanced_reboot"
+            android:title="@string/advanced_reboot_title"
+            android:summary="@string/advanced_reboot_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="root_access"
+            android:title="@string/root_access"
+            android:persistent="false" />
+
+        <Preference
+            android:key="root_appops"
+            android:title="@string/root_appops_title"
+            android:summary="@string/root_appops_summary" />
+
+        <SwitchPreference
+            android:key="enable_adb"
+            android:title="@string/adb_enable"
+            android:summary="@string/adb_enable_summary" />
+
     <PreferenceCategory
         android:key="debug_misc_category"
         android:order="100">
@@ -46,12 +67,6 @@
             android:icon="@drawable/ic_bugreport"
             android:title="@*android:string/bugreport_title"
             android:dialogTitle="@*android:string/bugreport_title" />
-
-        <lineageos.preference.LineageSecureSettingSwitchPreference
-            android:key="advanced_reboot"
-            android:title="@string/advanced_reboot_title"
-            android:summary="@string/advanced_reboot_summary"
-            android:defaultValue="false" />
 
         <Preference
             android:key="local_backup_password"
@@ -137,27 +152,12 @@
             android:key="quick_settings_tiles"
             android:title="@string/quick_settings_developer_tiles"
             android:fragment="com.android.settings.development.qstile.DevelopmentTileConfigFragment" />
-
-        <ListPreference
-            android:key="root_access"
-            android:title="@string/root_access"
-            android:persistent="false" />
-
-        <Preference
-            android:key="root_appops"
-            android:title="@string/root_appops_title"
-            android:summary="@string/root_appops_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="debug_debugging_category"
         android:title="@string/debug_debugging_category"
         android:order="200">
-
-        <SwitchPreference
-            android:key="enable_adb"
-            android:title="@string/adb_enable"
-            android:summary="@string/adb_enable_summary" />
 
         <lineageos.preference.LineageSecureSettingSwitchPreference
             android:key="adb_notify"
